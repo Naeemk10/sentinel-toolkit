@@ -1,0 +1,20 @@
+.wrap { display: flex; flex-direction: column; gap: 14px; }
+
+.subrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--tx);
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+
+.toggle input { accent-color: var(--ac); }

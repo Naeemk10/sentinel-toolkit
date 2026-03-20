@@ -1,0 +1,14 @@
+.btn {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--tx);
+  transition: all var(--tr);
+}
+.btn:hover:not(:disabled) { color: var(--wh); border-color: var(--dim); background: var(--glass-hover); }
+.btn:disabled { opacity: .3; cursor: not-allowed; }
+.copied { color: var(--grn) !important; border-color: rgba(6,214,160,.4) !important; background: rgba(6,214,160,.06) !important; }

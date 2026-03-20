@@ -1,0 +1,54 @@
+.wrap { display: flex; flex-direction: column; gap: 14px; }
+
+/* Hero */
+.hero { display: flex; align-items: flex-start; gap: 14px; padding: 16px; background: rgba(74,144,217,.06); border: 1px solid rgba(74,144,217,.15); border-radius: var(--radius-lg); }
+.heroIcon { font-size: 28px; flex-shrink: 0; }
+.heroTitle { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--wh); margin-bottom: 4px; }
+.heroSub { font-size: 13px; color: var(--tx); line-height: 1.5; }
+
+/* Examples */
+.examples { display: flex; gap: 6px; flex-wrap: wrap; }
+.exBtn { font-family: var(--font-mono); font-size: 11px; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--bd); background: transparent; color: var(--tx); cursor: pointer; transition: all var(--tr); }
+.exBtn:hover { color: var(--ac); border-color: rgba(74,144,217,.4); background: rgba(74,144,217,.06); }
+
+/* Input */
+.label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--dim); letter-spacing: 1.5px; margin-bottom: 6px; }
+.textarea { font-family: var(--font-mono); font-size: 12px; background: var(--bg2); color: var(--wh); border: 1px solid var(--bd); border-radius: var(--radius); padding: 12px; width: 100%; resize: vertical; outline: none; transition: border-color var(--tr); line-height: 1.65; }
+.textarea:focus { border-color: var(--ac); }
+.textarea::placeholder { color: var(--dim); }
+
+/* Actions */
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.btnProcess { font-family: var(--font-head); font-size: 12px; font-weight: 700; padding: 9px 20px; border-radius: var(--radius); background: var(--ac); color: var(--wh); border: none; }
+.btnProcess:hover { background: var(--ac2); }
+.btnProcess:active { transform: scale(.97); }
+.hint { font-size: 10px; font-weight: 400; opacity: .65; margin-left: 6px; font-family: var(--font-mono); }
+.btnClear { font-family: var(--font-head); font-size: 12px; font-weight: 600; padding: 9px 16px; border-radius: var(--radius); border: 1px solid var(--bd); background: transparent; color: var(--tx); }
+.btnClear:hover { color: var(--red); border-color: rgba(239,35,60,.4); }
+
+/* Results */
+.results { display: flex; flex-direction: column; gap: 14px; }
+
+/* Score card */
+.scoreCard { display: flex; align-items: stretch; gap: 16px; padding: 16px; background: var(--bg2); border: 1px solid; border-radius: var(--radius-lg); }
+.scoreLeft { display: flex; align-items: baseline; gap: 4px; flex-shrink: 0; }
+.scoreNum { font-family: var(--font-head); font-size: 48px; font-weight: 800; line-height: 1; }
+.scoreLabel { font-family: var(--font-mono); font-size: 14px; color: var(--dim); }
+.scoreRight { flex: 1; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+.scoreBand { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+.scoreBar { height: 6px; background: var(--bd); border-radius: 3px; overflow: hidden; }
+.scoreBarFill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+.scoreReasons { display: flex; gap: 6px; flex-wrap: wrap; }
+.reasonPill { font-family: var(--font-mono); font-size: 10px; padding: 3px 8px; border-radius: 20px; background: rgba(255,255,255,.05); border: 1px solid var(--bd); color: var(--tx); }
+
+/* Detection cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.card { background: var(--bg2); border: 1px solid var(--bd); border-top: 3px solid; border-radius: var(--radius-lg); overflow: hidden; }
+.cardHeader { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--bd); background: rgba(255,255,255,.02); }
+.cardIcon { font-size: 14px; }
+.cardTitle { font-family: var(--font-head); font-size: 13px; font-weight: 700; flex: 1; }
+.cardBody { padding: 4px 0; }
+.cardRow { display: flex; gap: 8px; padding: 7px 14px; border-bottom: 1px solid var(--bd); }
+.cardRow:last-child { border-bottom: none; }
+.cardKey { font-family: var(--font-mono); font-size: 10px; color: var(--dim); letter-spacing: 0.5px; min-width: 70px; flex-shrink: 0; padding-top: 2px; }
+.cardVal { font-family: var(--font-mono); font-size: 12px; color: var(--wh); word-break: break-all; flex: 1; }

@@ -1,0 +1,38 @@
+name: Deploy SOC Swiss Knife
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'swiss-knife/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Build and Deploy
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: swiss-knife/package-lock.json
+
+      - name: Install dependencies
+        working-directory: swiss-knife
+        run: npm ci
+
+      - name: Build
+        working-directory: swiss-knife
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: soc-swiss-knife
+          directory: swiss-knife/dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

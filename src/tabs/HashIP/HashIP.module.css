@@ -1,0 +1,64 @@
+.wrap { display: flex; flex-direction: column; gap: 14px; }
+
+.label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; color: var(--dim); letter-spacing: 1.5px; margin-bottom: 6px; }
+
+.textarea { font-family: var(--font-mono); font-size: 12px; background: var(--bg2); color: var(--wh); border: 1px solid var(--bd); border-radius: var(--radius); padding: 12px; width: 100%; resize: vertical; outline: none; transition: border-color var(--tr); line-height: 1.65; }
+.textarea:focus { border-color: var(--ac); }
+.textarea::placeholder { color: var(--dim); }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btnProcess { font-family: var(--font-head); font-size: 12px; font-weight: 700; padding: 9px 20px; border-radius: var(--radius); background: var(--ac); color: var(--wh); border: none; }
+.btnProcess:hover:not(:disabled) { background: var(--ac2); }
+.btnProcess:active:not(:disabled) { transform: scale(.97); }
+.btnProcess:disabled { opacity: .5; cursor: not-allowed; }
+.hint { font-size: 10px; font-weight: 400; opacity: .65; margin-left: 6px; font-family: var(--font-mono); }
+
+.btnClear { font-family: var(--font-head); font-size: 12px; font-weight: 600; padding: 9px 16px; border-radius: var(--radius); border: 1px solid var(--bd); background: transparent; color: var(--tx); }
+.btnClear:hover { color: var(--red); border-color: rgba(239,35,60,.4); }
+
+.error { font-family: var(--font-mono); font-size: 12px; color: var(--red); padding: 10px 14px; background: rgba(239,35,60,.08); border: 1px solid rgba(239,35,60,.2); border-radius: var(--radius); }
+
+.results { display: flex; flex-direction: column; gap: 6px; }
+
+/* Hash Identify */
+.hashRow { background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius); padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; }
+.hashVal { font-family: var(--font-mono); font-size: 11px; color: var(--tx); word-break: break-all; }
+.hashMeta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.badge { font-family: var(--font-mono); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.badgeGrn { background: rgba(6,214,160,.12); color: var(--grn); border: 1px solid rgba(6,214,160,.3); }
+.badgeYlw { background: rgba(244,162,97,.12); color: var(--ylw); border: 1px solid rgba(244,162,97,.3); }
+.bits { font-family: var(--font-mono); font-size: 11px; color: var(--dim); }
+
+/* Hash Generate */
+.genRow { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius); }
+.algo { font-family: var(--font-head); font-size: 11px; font-weight: 700; color: var(--ac); min-width: 60px; }
+.genHash { font-family: var(--font-mono); font-size: 11px; color: var(--wh); flex: 1; word-break: break-all; }
+
+/* Single result */
+.singleResult { background: var(--bg2); border: 1px solid rgba(74,144,217,.3); border-radius: var(--radius-lg); padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.singleVal { font-family: var(--font-mono); font-size: 16px; color: var(--grn); letter-spacing: 1px; }
+
+/* CIDR */
+.cidrResult { display: flex; flex-direction: column; gap: 14px; }
+.cidrGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (max-width: 600px) { .cidrGrid { grid-template-columns: repeat(2, 1fr); } }
+.cidrCell { background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius); padding: 10px 12px; }
+.cidrKey { font-family: var(--font-mono); font-size: 10px; color: var(--dim); letter-spacing: 1px; margin-bottom: 4px; }
+.cidrVal { font-family: var(--font-mono); font-size: 13px; color: var(--wh); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+.ipListWrap { background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius-lg); padding: 14px; }
+.ipListHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.ipList { display: flex; flex-wrap: wrap; gap: 6px; max-height: 200px; overflow-y: auto; }
+.ipChip { font-family: var(--font-mono); font-size: 11px; background: var(--bg3); border: 1px solid var(--bd); border-radius: 4px; padding: 3px 8px; color: var(--tx); }
+
+/* IP Check */
+.ipCheckRow { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius); flex-wrap: wrap; }
+.ipCheckAddr { font-family: var(--font-mono); font-size: 13px; min-width: 120px; }
+.ipRange { font-family: var(--font-mono); font-size: 11px; color: var(--tx); }
+
+/* Binary */
+.binRow { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--radius); flex-wrap: wrap; }
+.binIP { font-family: var(--font-mono); font-size: 13px; color: var(--ac); min-width: 100px; }
+.binArrow { color: var(--dim); }
+.binVal { font-family: var(--font-mono); font-size: 12px; color: var(--grn); flex: 1; word-break: break-all; }

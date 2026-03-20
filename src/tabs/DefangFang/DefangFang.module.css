@@ -1,0 +1,13 @@
+.wrap { display: flex; flex-direction: column; gap: 14px; }
+
+.detected {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(74,144,217,.3);
+  background: rgba(74,144,217,.08);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--tx);
+}
+
+.detected strong { color: var(--ac); }

@@ -1,0 +1,14 @@
+.btn {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,212,255,.2);
+  background: transparent;
+  color: var(--cyn);
+  margin-left: auto;
+  transition: all var(--tr);
+}
+.btn:hover:not(:disabled) { background: rgba(0,212,255,.07); border-color: rgba(0,212,255,.45); box-shadow: 0 0 16px rgba(0,212,255,.1); }
+.btn:disabled { opacity: .3; cursor: not-allowed; }

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:  #070b14;
+  --bg1: #0b1020;
+  --bg2: #0f1628;
+  --bg3: #141c30;
+  --bd:  rgba(255,255,255,.06);
+  --bd2: rgba(74,144,217,.2);
+  --tx:  rgba(255,255,255,.55);
+  --wh:  #ffffff;
+  --dim: rgba(255,255,255,.2);
+  --ac:  #4a90d9;
+  --ac2: #357abd;
+  --ac3: #2563a8;
+  --grn: #06d6a0;
+  --red: #ef233c;
+  --ylw: #f4a261;
+  --pur: #9b59f5;
+  --cyn: #00d4ff;
+
+  --glass:     rgba(255,255,255,.03);
+  --glass-h:   rgba(255,255,255,.06);
+  --glass-bd:  rgba(255,255,255,.08);
+  --glass-ac:  rgba(74,144,217,.1);
+  --glass-acbd:rgba(74,144,217,.2);
+  --glow-ac:   rgba(74,144,217,.25);
+
+  --font-head: 'Rajdhani', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+
+  --r:   8px;
+  --rl:  12px;
+  --rxl: 16px;
+  --tr:  150ms ease;
+  --sidebar-w: 224px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--wh);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--ac); color: var(--wh); }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.08); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--dim); }
+
+textarea, input[type="text"] {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: rgba(6,9,15,.7);
+  color: var(--wh);
+  border: 1px solid var(--glass-bd);
+  border-radius: var(--r);
+  padding: 12px;
+  width: 100%;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--tr), box-shadow var(--tr);
+  line-height: 1.65;
+}
+
+textarea:focus, input[type="text"]:focus {
+  border-color: rgba(74,144,217,.45);
+  box-shadow: 0 0 0 3px rgba(74,144,217,.06);
+}
+
+textarea::placeholder, input::placeholder { color: var(--dim); }
+button { cursor: pointer; font-family: var(--font-head); border: none; outline: none; transition: all var(--tr); }

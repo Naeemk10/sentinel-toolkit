@@ -1,0 +1,115 @@
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: rgba(11,16,32,.7);
+  border-right: 1px solid rgba(255,255,255,.06);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  gap: 2px;
+  overflow-y: auto;
+  backdrop-filter: blur(20px);
+  height: 100%;
+}
+
+.section {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255,255,255,.2);
+  letter-spacing: 2px;
+  padding: 10px 10px 4px;
+  margin-top: 6px;
+}
+.section:first-child { margin-top: 0; }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border-radius: var(--r);
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  color: var(--tx);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--tr);
+  position: relative;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.item:hover {
+  color: var(--wh);
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.06);
+}
+
+.active {
+  color: var(--ac) !important;
+  background: var(--glass-ac) !important;
+  border-color: var(--glass-acbd) !important;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 22%;
+  bottom: 22%;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--ac);
+  box-shadow: 0 0 10px var(--ac), 0 0 20px rgba(74,144,217,.3);
+}
+
+.icon { font-size: 14px; width: 18px; text-align: center; flex-shrink: 0; }
+.label { flex: 1; }
+
+.newBadge {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 20px;
+  background: rgba(6,214,160,.1);
+  color: var(--grn);
+  border: 1px solid rgba(6,214,160,.2);
+  flex-shrink: 0;
+  letter-spacing: .5px;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 12px 10px 4px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.offlineBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--grn);
+}
+
+.offlineDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--grn);
+  box-shadow: 0 0 6px var(--grn);
+  flex-shrink: 0;
+  animation: odPulse 2s ease-in-out infinite;
+}
+
+@keyframes odPulse {
+  0%,100% { box-shadow: 0 0 4px var(--grn); }
+  50%      { box-shadow: 0 0 12px var(--grn); }
+}
